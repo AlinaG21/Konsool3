@@ -138,6 +138,31 @@ Part 17 - C# Tutorial - Method parameters.avi
         j = 101;
     }
     }
+    
+    
+    using System;
+    class Program
+    {
+    public static void Main()
+    {
+        int Total = 0;
+        int Product = 0;
+        Calculate(10, 20, out Total, out Product);
+
+        Console.WriteLine("Sum = {0} && Product = {1}", Total, Product);
+    }
+
+    public static void Calculate(int FN, int SN, out int Sum, out int Product)
+    {
+        Sum = FN + SN;
+        Product = FN + SN;
+    }
+   
+    }
+    
+    
+
+
 
 
 
