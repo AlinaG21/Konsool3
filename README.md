@@ -87,7 +87,41 @@ Part 15 - C# Tutorial - for and foreach loops in c#.avi
     }
     }
     
-Part 16 - C# Tutorial - Methods in c#.avi
+Part 16 - C# Tutorial - Methods in c#.avi'
+
+    using System;
+    class Program
+    {
+    public static void Main()
+    {
+        Program.EvenNumbers(30);
+
+        Program P = new Program();
+        int Sum = P.Add(10, 20);
+
+        Console.WriteLine("Sum = {0}", Sum);
+    }
+
+    public int Add(int  FN, int SN)
+    {
+        return FN + SN;
+    }
+
+    public static void EvenNumbers(int Target)
+    {
+        int Start = 0;
+
+        while (Start <= Target)
+        {
+            Console.WriteLine(Start);
+            Start = Start + 2;
+        }
+    }
+    }
+    
+Part 17 - C# Tutorial - Method parameters.avi
+
+
 
 
 
