@@ -58,16 +58,16 @@ Part 15 - C# Tutorial - for and foreach loops in c#.avi
             Console.WriteLine(k);  //konsooli ütles see numbri
         }
 
-          //for (int j = 0; j <= Numbers.Length; j++)
+          //for (int j = 0; j <= Numbers.Length; j++)  //esimene tingimuslik muutuja on 0, teine muutuja tsükli korduvate sammude arvu kontrollimiseks ja viimane osast i ++. See on iteratsioonilause - see käivitatakse pärast iga läbimist
         //{
           //  Console.WriteLine(Numbers[j]);  //konsool ütles number j
         //}
 
           //int i = 0;  //tingimuslik muutuja varane 0
-          //while (i < Numbers.Length)
+          //while (i < Numbers.Length)  //tsüklis korduvate sammude arv on suurem kui muutuja
           //{
-            //Console.WriteLine(Numbers[i]);
-            //i++;
+            //Console.WriteLine(Numbers[i]); //konsool ütleb muutuja
+            //i++;  //liitmine
           //}
     }
     }
@@ -78,10 +78,10 @@ Part 15 - C# Tutorial - for and foreach loops in c#.avi
     {
     static void Main()
     {
-         for (int i = 0; i <= 20; i++)  //esimene tingimuslik muutuja on 0, teine muutuja rohkem kui 20 või varane ja viimane osast i ++. See on iteratsioonilause - see käivitatakse pärast iga läbimist.
+         for (int i = 0; i <= 20; i++)  //esimene tingimuslik muutuja on 0, teine muutuja rohkem kui 20 või varane ja viimane osast i ++. See on iteratsioonilause - see käivitatakse pärast iga läbimist
         {
             if (i % 2 == 1)
-                continue;
+                continue; //jätkata
 
             Console.WriteLine(i);  //konsool küsib muutujat
         }
@@ -105,17 +105,17 @@ Part 16 - C# Tutorial - Methods in c#.avi'
 
     public int Add(int  FN, int SN)
     {
-        return FN + SN;
+        return FN + SN;  //tagastusväärtus
     }
 
-    public static void EvenNumbers(int Target)
+    public static void EvenNumbers(int Target)  //on staatiline liige
     {
-        int Start = 0;
+        int Start = 0;  //algmuutuja on 0
 
-        while (Start <= Target)
+        while (Start <= Target)  //arv peab olema suurem kui 0 või varane
         {
-            Console.WriteLine(Start);
-            Start = Start + 2;
+            Console.WriteLine(Start);  //konsool ütleb start
+            Start = Start + 2;  //lihtsalt tähendab start
         }
     }
     }
@@ -127,16 +127,16 @@ Part 17 - C# Tutorial - Method parameters.avi
     {
     public static void Main()
     {
-        int i = 0;
+        int i = 0;  //muutuja on 0
 
-        SimpleMethod(ref i);
+        SimpleMethod(ref i);  //muutuva läbimise meetod
 
-        Console.WriteLine(i);
+        Console.WriteLine(i);  //konsool näitab muutuja
     }
 
-    public static void SimpleMethod(ref int j)
+    public static void SimpleMethod(ref int j)  //muutuva läbimise meetod
     {
-        j = 101;
+        j = 101;  //muutuja
     }
     }
     
@@ -146,11 +146,11 @@ Part 17 - C# Tutorial - Method parameters.avi
     {
     public static void Main()
     {
-        int Total = 0;
-        int Product = 0;
-        Calculate(10, 20, out Total, out Product);
+        int Total = 0;  //kokku 0
+        int Product = 0;  //toote 0
+        Calculate(10, 20, out Total, out Product);  //arvutama kokku ja toote
 
-        Console.WriteLine("Sum = {0} && Product = {1}", Total, Product);
+        Console.WriteLine("Sum = {0} && Product = {1}", Total, Product);  //konsool ütleb 
     }
 
     public static void Calculate(int FN, int SN, out int Sum, out int Product)
@@ -181,9 +181,9 @@ Part 17 - C# Tutorial - Method parameters.avi
     {
         Console.WriteLine("There are {0} elemnts", Numbers.Length);
 
-        foreach (int i in Numbers)
+        foreach (int i in Numbers)  //muutuja numbris
         {
-            Console.WriteLine(i);
+            Console.WriteLine(i);  //konsool ütleb muutuja
         }
     }
 
@@ -198,34 +198,34 @@ Part 17 - C# Tutorial - Method parameters.avi
     {
         static void Main(string[] args)
         {
-            int first = 1;
-            int second = 2;
+            int first = 1;  //esimene muutuja 1
+            int second = 2;  //teine muutuja 2
 
-            Method1(out first, out second);
-            Method2(first, ref second);
-            Method3(ref first, second);
+            Method1(out first, out second);  //esimene meetod
+            Method2(first, ref second);  //teine meetod
+            Method3(ref first, second);  //kolmas meetod
 
-            Console.WriteLine($"first: {first}, second: {second}");
-            Console.ReadLine();
+            Console.WriteLine($"first: {first}, second: {second}");  // konsool küsib esimene ja teine numbrid
+            Console.ReadLine();  //konsool ütles
 
         }
 
         static void Method1(out int a, out int b)
         {
-            a = 2;
-            b = 1;
+            a = 2;  //tuntud muutuja
+            b = 1;  //tuntud muutuja
         }
 
         static void Method2(int a, ref int b)
         {
-            a *= 5;
-            b *= a;
+            a *= 5;  //tuntud muutuja
+            b *= a;  //tundmatu muutuja
         }
 
         static void Method3(ref int a, int b)
         {
-            a *= 5;
-            b *= b;
+            a *= 5;  //tuntud muutuja
+            b *= b;  //tundmatu muutuja
         }
     }
     }
