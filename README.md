@@ -70,6 +70,27 @@ Part 15 - C# Tutorial - for and foreach loops in c#.avi
           //}
     }
     }
+    
+    
+    using System;
+    class Program
+    {
+    static void Main()
+    {
+         for (int i = 0; i <= 20; i++)
+        {
+            if (i % 2 == 1)
+                continue;
+
+            Console.WriteLine(i);
+        }
+    }
+    }
+    
+Part 16 - C# Tutorial - Methods in c#.avi
+
+
+
 
 
 
