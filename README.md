@@ -1,8 +1,6 @@
 # Konsool3
 
 Part 14 - C# Tutorial - do while loop in c#
-{
-
 
 using System;
 
