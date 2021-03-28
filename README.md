@@ -121,6 +121,26 @@ Part 16 - C# Tutorial - Methods in c#.avi'
     
 Part 17 - C# Tutorial - Method parameters.avi
 
+    using System;
+    class Program
+    {
+    public static void Main()
+    {
+        int i = 0;
+
+        SimpleMethod(ref i);
+
+        Console.WriteLine(i);
+    }
+
+    public static void SimpleMethod(ref int j)
+    {
+        j = 101;
+    }
+    }
+
+
+
 
 
 
