@@ -4,8 +4,6 @@ Part 14 - C# Tutorial - do while loop in c#
 
 using System;
 
-namespace ConsoleApp5
-{
     class Program
     {
         static void Main()
@@ -39,7 +37,7 @@ namespace ConsoleApp5
 
         }
     }
-}
+
 
 
    
