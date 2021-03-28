@@ -1,11 +1,8 @@
 # Konsool3
 
+//using System;
 
-
-
-using System;
-
-namespace ConsoleApp5
+//namespace ConsoleApp5
 {
     class Program
     {
