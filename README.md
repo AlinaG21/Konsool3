@@ -1,4 +1,8 @@
 # Konsool3
+
+
+
+
 using System;
 
 namespace ConsoleApp5
