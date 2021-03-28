@@ -10,29 +10,30 @@ Part 14 - C# Tutorial - do while loop in c#
             string UserChoice = string.Empty;
             do
             {
+               
+                
+                Console.WriteLine("Please enter your target?"); //Mis kirjutab konsoolis
+                int UserTarget = int.Parse(Console.ReadLine());  //Loeb ja kirjutas konsoolis
 
-                Console.WriteLine("Please enter your target?");
-                int UserTarget = int.Parse(Console.ReadLine());
+                int Start = 0;  //algmuutuja on 0
 
-                int Start = 0;
-
-                while (Start <= UserTarget)
+                while (Start <= UserTarget)  //arv peab olema suurem kui 0 või varane
                 {
-                    Console.WriteLine(Start + " ");
-                    Start = Start + 2;
+                    Console.WriteLine(Start + " ");  //konsool võtab kokku
+                    Start = Start + 2;  //lihtsalt tähendab start
                 }
 
                 do
                 {
-                    Console.WriteLine("Do you want continue - Yes or No ?");
+                    Console.WriteLine("Do you want continue - Yes or No ?");  // konsool küsib kaks vastuse variandid Yes või No?
 
                     UserChoice = Console.ReadLine().ToUpper();
-                    if (UserChoice != "YES" && UserChoice != "NO")
+                    if (UserChoice != "YES" && UserChoice != "NO") // konsool võtab ainult YES või NO
                     {
-                        Console.WriteLine("Invalid Choice, please say Yes or No");
+                        Console.WriteLine("Invalid Choice, please say Yes or No");  // kui kirjutab mitte Yes või No, siis küsib Yes või No
                     }
-                } while (UserChoice != "Yes" && UserChoice != "No");
-            } while (UserChoice == "YES");
+                } while (UserChoice != "Yes" && UserChoice != "No");  //Jah-ja ei-küsimuse väide while võrdsustab "JAH" asemel "JAH"
+            } while (UserChoice == "YES"); //while võrdsustab "JAH" asemel "JAH"
 
         }
     }
@@ -47,22 +48,22 @@ Part 15 - C# Tutorial - for and foreach loops in c#.avi
     {
          int[] Numbers = new int[4];
 
-          Numbers[0] = 101;
-          Numbers[1] = 102;
-          Numbers[2] = 103;
-          Numbers[3] = 104;
+          Numbers[0] = 101;  // number konsoolis
+          Numbers[1] = 102;  // number konsoolis
+          Numbers[2] = 103;  //number konsoolis
+          Numbers[3] = 104;  //number konsoolis
 
-        foreach (int k in Numbers)
+        foreach (int k in Numbers)  //iga numbri jaoks number
         {
-            Console.WriteLine(k);
+            Console.WriteLine(k);  //konsooli ütles see numbri
         }
 
           //for (int j = 0; j <= Numbers.Length; j++)
         //{
-          //  Console.WriteLine(Numbers[j]);
+          //  Console.WriteLine(Numbers[j]);  //konsool ütles number j
         //}
 
-          //int i = 0;
+          //int i = 0;  //tingimuslik muutuja varane 0
           //while (i < Numbers.Length)
           //{
             //Console.WriteLine(Numbers[i]);
@@ -77,12 +78,12 @@ Part 15 - C# Tutorial - for and foreach loops in c#.avi
     {
     static void Main()
     {
-         for (int i = 0; i <= 20; i++)
+         for (int i = 0; i <= 20; i++)  //esimene tingimuslik muutuja on 0, teine muutuja rohkem kui 20 või varane ja viimane osast i ++. See on iteratsioonilause - see käivitatakse pärast iga läbimist.
         {
             if (i % 2 == 1)
                 continue;
 
-            Console.WriteLine(i);
+            Console.WriteLine(i);  //konsool küsib muutujat
         }
     }
     }
@@ -94,12 +95,12 @@ Part 16 - C# Tutorial - Methods in c#.avi'
     {
     public static void Main()
     {
-        Program.EvenNumbers(30);
+        Program.EvenNumbers(30);  //programmi number 30
 
-        Program P = new Program();
-        int Sum = P.Add(10, 20);
+        Program P = new Program();  // teeme uus programm
+        int Sum = P.Add(10, 20);  //programmi summa
 
-        Console.WriteLine("Sum = {0}", Sum);
+        Console.WriteLine("Sum = {0}", Sum);  //programm algab 0-st
     }
 
     public int Add(int  FN, int SN)
