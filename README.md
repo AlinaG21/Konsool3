@@ -7,16 +7,36 @@ namespace ConsoleApp5
     {
         static void Main()
         {
-            Console.WriteLine("Please enter your target?");
-            int UserTarget = int.Parse(Console.ReadLine());
-
-            int Start = 0;
-
-            while(Start <= UserTarget)
+            string UserChoice = string.Empty;
+            do
             {
-                Console.WriteLine(Start + " ");
-                Start = Start + 2;
-            }
+
+                Console.WriteLine("Please enter your target?");
+                int UserTarget = int.Parse(Console.ReadLine());
+
+                int Start = 0;
+
+                while (Start <= UserTarget)
+                {
+                    Console.WriteLine(Start + " ");
+                    Start = Start + 2;
+                }
+
+                do
+                {
+                    Console.WriteLine("Do you want continue - Yes or No ?");
+
+                    UserChoice = Console.ReadLine().ToUpper();
+                    if (UserChoice != "YES" && UserChoice != "NO")
+                    {
+                        Console.WriteLine("Invalid Choice, please say Yes or No");
+                    }
+                } while (UserChoice != "Yes" && UserChoice != "No");
+            } while (UserChoice == "YES");
+
         }
     }
 }
+
+
+   
